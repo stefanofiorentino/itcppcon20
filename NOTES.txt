@@ -1,0 +1,13 @@
+1- Intro
+Hello everyone, my name is Stefano Fiorentino and this is an hit and run from header-only to static linking library development.
+
+2- About
+C++ header-only library is enabling more and more library users to include dependencies in their project with ease. You just "git clone" or even copy&paste and you can start work. The main drawbacks are executable size bloat and compilation time increase. When compilation takes long time, a little modification in the userspace code yields a long compilation time of the artifact, maybe mainly due to the instantiations of your header-only lib. So you clients may accuse your library to slowdown the compilation time of their project.
+
+Paying the cost of a little extra effort you can transform your header-only library in a static linking one. Let's see how we can achieve this goal.
+
+3- Not addressing
+First of all, if your header-only lib is only about variadic template aiming to manage lambda function, this talk isn't for you.
+
+4- Addressing
+If 1) your use of template is about generic programming to allow several, but limited, configurations to work with the same library-space code and 2) these configurations are completely instantiable with zero knowledge of userspace code, this talk is for you.
